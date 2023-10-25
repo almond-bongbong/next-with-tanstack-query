@@ -4,13 +4,13 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 
 function ClientOnlyComponent() {
-  const { data } = useQuery({
+  const { data, error } = useQuery({
     queryKey: ['list'],
-    queryFn: () => fetch('/api/hello').then((res) => res.json()),
+    queryFn: () => fetch('/api/error').then((res) => res.json()),
     // staleTime: 1000 * 60 * 60 * 24, // 24 hours
   });
 
-  console.log(data);
+  console.log(data, error);
 
   return (
     <div style={{ marginTop: 50, textAlign: 'center' }}>
