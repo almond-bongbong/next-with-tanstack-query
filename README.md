@@ -15,3 +15,4 @@
   - `error`객체는 `retry`가 모두 실패했을 때 채워진다.
   - `retryDelay` 기본값은 1초 > 2초 > 4초로 백오프 지연이 적용된다.
 - [ ] SSR 에서 어떻게 작동하는지? (retry 또한 적용되는지?)
+- [ ] isFetching, isLoading 동작 확인
